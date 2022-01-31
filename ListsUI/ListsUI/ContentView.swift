@@ -8,9 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var array = ["Element 1","Element 2","Element 3","Element 4","Element 5","Element 6"]
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        NavigationView {
+            
+            List(array, id: \.self) { arrayElement in
+                
+                NavigationLink {
+                    Text("Destination")
+                } label: {
+                    Text(arrayElement)
+                }
+                
+            }.navigationTitle(Text("My List")).listStyle(PlainListStyle())
+        }
     }
 }
 
