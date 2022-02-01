@@ -51,6 +51,11 @@
 		044E3E2227A9546B00699EFF /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				044E3E3527A954D800699EFF /* Services */,
+				044E3E3427A954D300699EFF /* Data */,
+				044E3E3327A954C900699EFF /* Models */,
+				044E3E3227A954C000699EFF /* ViewModels */,
+				044E3E3127A954BC00699EFF /* Views */,
 				044E3E2327A9546B00699EFF /* RecipesApp.swift */,
 				044E3E2527A9546B00699EFF /* ContentView.swift */,
 				044E3E2727A9546B00699EFF /* Assets.xcassets */,
@@ -65,6 +70,41 @@
 				044E3E2A27A9546B00699EFF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		044E3E3127A954BC00699EFF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		044E3E3227A954C000699EFF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		044E3E3327A954C900699EFF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		044E3E3427A954D300699EFF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		044E3E3527A954D800699EFF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
