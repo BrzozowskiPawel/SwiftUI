@@ -14,6 +14,8 @@
 		04B9282427A9963000F52010 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 04B9282327A9963000F52010 /* Data.json */; };
 		04B9282B27A996F200F52010 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9282A27A996F200F52010 /* Quote.swift */; };
 		04B9282D27A9977C00F52010 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9282C27A9977C00F52010 /* DataService.swift */; };
+		04B9282F27A998D600F52010 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9282E27A998D600F52010 /* Card.swift */; };
+		04B9283127A99BE700F52010 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9283027A99BE700F52010 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		04B9282327A9963000F52010 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 		04B9282A27A996F200F52010 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		04B9282C27A9977C00F52010 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		04B9282E27A998D600F52010 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		04B9283027A99BE700F52010 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				04B9281727A9960100F52010 /* ContentView.swift */,
+				04B9282E27A998D600F52010 /* Card.swift */,
+				04B9283027A99BE700F52010 /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,7 +194,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B9281827A9960100F52010 /* ContentView.swift in Sources */,
+				04B9283127A99BE700F52010 /* DetailView.swift in Sources */,
 				04B9282B27A996F200F52010 /* Quote.swift in Sources */,
+				04B9282F27A998D600F52010 /* Card.swift in Sources */,
 				04B9281627A9960100F52010 /* QuotesApp.swift in Sources */,
 				04B9282D27A9977C00F52010 /* DataService.swift in Sources */,
 			);

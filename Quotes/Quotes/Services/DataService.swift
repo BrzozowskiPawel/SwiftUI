@@ -7,9 +7,11 @@
 
 import Foundation
 
-class DataService {
+class DataService: ObservableObject {
     
-    static func getLocalData() -> [Quote] {
+    @Published var quotes = [Quote]()
+    
+    func getLocalData() -> [Quote] {
         
         // Get a url to the JSON file
         let pathString = Bundle.main.path(forResource: "Data", ofType: "json")
@@ -45,6 +47,10 @@ class DataService {
         }
         
         return [Quote]()
+    }
+    
+    init() {
+        self.quotes = getLocalData()
     }
 }
 

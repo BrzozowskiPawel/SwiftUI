@@ -8,9 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var model = DataService()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    ForEach(model.quotes) { quote in
+                        NavigationLink {
+                            DetailView(quote: quote)
+                        } label: {
+                            Card(quote: quote)
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
