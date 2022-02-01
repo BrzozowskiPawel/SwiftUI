@@ -12,8 +12,7 @@ class RecipeModel: ObservableObject {
     @Published var recipes = [Recipe]()
     
     init() {
-        // Pasred the loacl json file
-        
         // Set the Recipes property
+        self.recipes = DataService.getLocalData()
     }
 }
