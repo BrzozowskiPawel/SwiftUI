@@ -16,3 +16,4 @@ class RecipeModel: ObservableObject {
         self.recipes = DataService.getLocalData()
     }
 }
+ 

@@ -14,7 +14,7 @@ class DataService {
         // Parse local JSON file
         
         // Get a url to the JSON file
-        let pathString = Bundle.main.path(forResource: "data", ofType: "json")
+        let pathString = Bundle.main.path(forResource: "recipes", ofType: "json")
         
         guard pathString != nil else {
             print("There is no data file")
