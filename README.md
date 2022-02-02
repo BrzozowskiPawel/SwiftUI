@@ -20,7 +20,7 @@ Take a look and ask my questions about it❕ </br>
   Here are the results: </br>
 
   ### DEMO
-  <img src="readme_files/CardWars.gif" alt="layout2" width="342"/> </br>
+  <img src="readme_files/CardWars.gif" alt="demo" width="342"/> </br>
 
 </details>
 
@@ -35,7 +35,7 @@ Take a look and ask my questions about it❕ </br>
   All the data here is being loaded from the local JSON file and formated into a project struct. </br>
   
   ### DEMO
-  <img src="readme_files/CardWars.gif" alt="layout2" width="342"/> </br>
+  <img src="readme_files/Quotes.gif" alt="demo" width="342"/> </br>
 
 </details>
 
