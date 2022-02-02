@@ -36,6 +36,10 @@ class DataService {
             // Add UUID
             for item in decodedData {
                 item.id = UUID()
+                
+                for ingriedent in item.ingredients {
+                    ingriedent.id = UUID()
+                }
             }
             
             // Return the recipes
