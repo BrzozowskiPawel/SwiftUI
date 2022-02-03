@@ -70,7 +70,7 @@ struct RecipeFeaturedView: View {
                 Text("Prerp Time:")
                 Text(model.recipes[tabSelectionIndex].prepTime)
                 Text("Highlight")
-                Text("Healthy, Hearty")
+                RecipeHighlights(highlightsArray: model.recipes[tabSelectionIndex].highlights)
             }
             .padding(.leading).padding(.bottom)
         }.onAppear {
