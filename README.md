@@ -1,4 +1,3 @@
-# SwiftUI
 # SwiftUI Programming 🏆
 
 This repo will contain a wide range of different apps written with Swift with SwiftUI on purpose to make me a better programmer. </br>
