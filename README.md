@@ -51,7 +51,7 @@ Take a look and ask my questions about it❕ </br>
   Check out the demo and ask any extra questions about this project: </br>
   
   ### DEMO
-  <img src="readme_files/Recipes.gif" alt="demo" width="348"/> </br>
+  <img src="readme_files/recipes.gif" alt="demo" width="348"/> </br>
 
 </details>
 
