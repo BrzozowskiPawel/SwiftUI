@@ -39,6 +39,21 @@ Take a look and ask my questions about it❕ </br>
 
 </details>
 
+## Recipes - tab bar app with delicious recipes!
+<details>
+  <summary>Click to expand details!</summary>
+  
+  The first bigger app is written with an MVVM design pattern. </br>
+  Users can choose between favourites and a list of all recipes. </br>
+  By clicking on each card (which is a separate UI object) user can see all the details for this recipe. </br>
+  All the data is being loaded from local JSON data and saved into the struct. </br>
+  Besides that, I have learned about `@State` and `@EnvironmentObject` in action. </br>
+  Check out the demo and ask any extra questions about this project: </br>
+  
+  ### DEMO
+  <img src="readme_files/Recipes.gif" alt="demo" width="348"/> </br>
+
+</details>
 
 
   
