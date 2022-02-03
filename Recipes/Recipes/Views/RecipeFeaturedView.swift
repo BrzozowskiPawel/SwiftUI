@@ -67,7 +67,7 @@ struct RecipeFeaturedView: View {
             }
             
             VStack(alignment: .leading, spacing: 10) {
-                Text("Prerp Time:")
+                Text("Prep Time:")
                 Text(model.recipes[tabSelectionIndex].prepTime)
                 Text("Highlight")
                 RecipeHighlights(highlightsArray: model.recipes[tabSelectionIndex].highlights)
