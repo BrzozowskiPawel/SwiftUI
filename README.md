@@ -2,7 +2,7 @@
 
 This repo will contain a wide range of different apps written with Swift with SwiftUI on purpose to make me a better programmer. </br>
 The level of difficulty will increase with time. </br>
-Apps here are part of this [course](https://codewithchris.com/) 👀.</br>
+Apps here are part of this [course](https://codewithchris.com/) and also this [course](https://www.hackingwithswift.com/100/swiftui) 👀.</br>
 I try to learn things that I don't know and also add some extra features for each app. </br>
 Take a look and ask my questions about it❕ </br>
 
