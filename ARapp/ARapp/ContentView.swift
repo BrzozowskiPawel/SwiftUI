@@ -10,6 +10,8 @@ import RealityKit
 
 struct ContentView : View {
     @State private var isPlacementEnabled = false
+    @State private var selectedModel: String?
+    @State private var modelConfrimedForPlacement: String?
     
     private var models: [String] = {
         let filemanager = FileManager.default
@@ -26,12 +28,13 @@ struct ContentView : View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            ARViewContainer()
+            ARViewContainer(modelConfirmedForPlacement: self.$modelConfrimedForPlacement)
             
             if self.isPlacementEnabled {
-                PlacentButtonsView(isPlacementEnabled: self.$isPlacementEnabled)
+                PlacentButtonsView(isPlacementEnabled: self.$isPlacementEnabled, selectedModel: self.$selectedModel, modelConfirmedForPlacement: self.$modelConfrimedForPlacement)
             } else {
-                ModelPickerView(isPlacementEnabled: self.$isPlacementEnabled, models: models)
+                ModelPickerView(isPlacementEnabled: self.$isPlacementEnabled, selectedModel: self.$selectedModel,
+                                models: models)
             }
             
         }
@@ -39,7 +42,7 @@ struct ContentView : View {
 }
 
 struct ARViewContainer: UIViewRepresentable {
-    
+    @Binding var modelConfirmedForPlacement: String?
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
@@ -48,12 +51,20 @@ struct ARViewContainer: UIViewRepresentable {
         
     }
     
-    func updateUIView(_ uiView: ARView, context: Context) {}
+    func updateUIView(_ uiView: ARView, context: Context) {
+        if let modelName = self.modelConfirmedForPlacement {
+            print("DEBUG: adding model to scene: \(modelName)")
+            DispatchQueue.main.async {
+                self.modelConfirmedForPlacement = nil
+            }
+        }
+    }
     
 }
 
 struct ModelPickerView: View {
     @Binding var isPlacementEnabled: Bool
+    @Binding var selectedModel: String?
     var models: [String]
     
     var body: some View {
@@ -62,6 +73,7 @@ struct ModelPickerView: View {
                 ForEach(0..<self.models.count) { index in
                     Button {
                         print("HELLO")
+                        self.selectedModel = self.models[index]
                         self.isPlacementEnabled = true
                     } label: {
                         Image(self.models[index])
@@ -81,6 +93,9 @@ struct ModelPickerView: View {
 
 struct PlacentButtonsView: View {
     @Binding var isPlacementEnabled: Bool
+    @Binding var selectedModel: String?
+    @Binding var modelConfirmedForPlacement: String?
+    
     var body: some View {
         HStack {
             Button {
@@ -97,6 +112,7 @@ struct PlacentButtonsView: View {
             }
             Button {
                 print("DEBUG MODEL CONFIM")
+                self.modelConfirmedForPlacement = self.selectedModel
                 resetPlacementParameters()
             } label: {
                 Image(systemName: "checkmark")
@@ -111,6 +127,7 @@ struct PlacentButtonsView: View {
     }
     func resetPlacementParameters() {
         self.isPlacementEnabled = false
+        self.selectedModel = nil
     }
 }
 
