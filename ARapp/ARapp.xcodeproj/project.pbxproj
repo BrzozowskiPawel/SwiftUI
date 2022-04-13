@@ -11,6 +11,9 @@
 		E5E9D2B328070C1C0041E20B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9D2B228070C1C0041E20B /* ContentView.swift */; };
 		E5E9D2B728070C1D0041E20B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5E9D2B628070C1D0041E20B /* Assets.xcassets */; };
 		E5E9D2BA28070C1D0041E20B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5E9D2B928070C1D0041E20B /* Preview Assets.xcassets */; };
+		E5E9D2C4280711690041E20B /* AirForce.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E5E9D2C1280711680041E20B /* AirForce.usdz */; };
+		E5E9D2C5280711690041E20B /* TV.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E5E9D2C2280711690041E20B /* TV.usdz */; };
+		E5E9D2C6280711690041E20B /* LemonPie.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E5E9D2C3280711690041E20B /* LemonPie.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		E5E9D2B228070C1C0041E20B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E5E9D2B628070C1D0041E20B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5E9D2B928070C1D0041E20B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5E9D2C1280711680041E20B /* AirForce.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = AirForce.usdz; sourceTree = "<group>"; };
+		E5E9D2C2280711690041E20B /* TV.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = TV.usdz; sourceTree = "<group>"; };
+		E5E9D2C3280711690041E20B /* LemonPie.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = LemonPie.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 		E5E9D2AF28070C1C0041E20B /* ARapp */ = {
 			isa = PBXGroup;
 			children = (
+				E5E9D2C02807112C0041E20B /* Models */,
 				E5E9D2B028070C1C0041E20B /* AppDelegate.swift */,
 				E5E9D2B228070C1C0041E20B /* ContentView.swift */,
 				E5E9D2B628070C1D0041E20B /* Assets.xcassets */,
@@ -65,6 +72,16 @@
 				E5E9D2B928070C1D0041E20B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E5E9D2C02807112C0041E20B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E5E9D2C1280711680041E20B /* AirForce.usdz */,
+				E5E9D2C3280711690041E20B /* LemonPie.usdz */,
+				E5E9D2C2280711690041E20B /* TV.usdz */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +144,9 @@
 			files = (
 				E5E9D2BA28070C1D0041E20B /* Preview Assets.xcassets in Resources */,
 				E5E9D2B728070C1D0041E20B /* Assets.xcassets in Resources */,
+				E5E9D2C5280711690041E20B /* TV.usdz in Resources */,
+				E5E9D2C4280711690041E20B /* AirForce.usdz in Resources */,
+				E5E9D2C6280711690041E20B /* LemonPie.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
