@@ -15,8 +15,10 @@ struct ContentView: View {
     ]
     
     @State private var moves: [Move?] = Array(repeating: nil, count: 9)
-    @State private var isHumanTurn = true
+//    @State private var isHumanTurn = true
     @State private var isGameBoardDisabled = false
+    @State private var alertItem: AlertItem?
+    
     var body: some View {
         GeometryReader {geometry in
             VStack{
@@ -38,7 +40,7 @@ struct ContentView: View {
                             isGameBoardDisabled = true
                             
                             if checkWinCondition(for: .human, in: moves) {
-                                print("Human Wins")
+                                alertItem = AlertContext.humanWin
                             }
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
@@ -47,12 +49,12 @@ struct ContentView: View {
                                 isGameBoardDisabled = false
                                 
                                 if checkWinCondition(for: .computer, in: moves) {
-                                    print("Computer Wins")
+                                    alertItem = AlertContext.computerWin
                                 }
                             }
                             
                             if checkForDraw(in: moves) {
-                                print("It's a draw!")
+                                alertItem = AlertContext.draw
                             }
                         }
                     }
@@ -61,8 +63,16 @@ struct ContentView: View {
             }
             .disabled(isGameBoardDisabled)
             .padding()
-
+            .alert(item: $alertItem) { alertItem in
+                Alert(title: alertItem.title, message: alertItem.message, dismissButton: .default(alertItem.buttonTitle, action: {
+                    resetGame()
+                }))
+            }
         }
+    }
+    
+    func resetGame() {
+    moves = Array(repeating: nil, count: 9)
     }
     
     func checkForDraw(in moves: [Move?]) -> Bool {
