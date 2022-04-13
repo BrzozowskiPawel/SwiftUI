@@ -55,9 +55,9 @@
 			children = (
 				E5E9D2762806DBA00041E20B /* TicTacToeApp.swift */,
 				E5E9D2782806DBA00041E20B /* ContentView.swift */,
+				E5E9D2842806F77A0041E20B /* Alerts.swift */,
 				E5E9D27A2806DBA10041E20B /* Assets.xcassets */,
 				E5E9D27C2806DBA10041E20B /* Preview Content */,
-				E5E9D2842806F77A0041E20B /* Alerts.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";

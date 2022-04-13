@@ -55,6 +55,7 @@ struct ContentView: View {
                             
                             if checkForDraw(in: moves) {
                                 alertItem = AlertContext.draw
+//                                resetGame()
                             }
                         }
                     }
@@ -72,7 +73,8 @@ struct ContentView: View {
     }
     
     func resetGame() {
-    moves = Array(repeating: nil, count: 9)
+        moves = Array(repeating: nil, count: 9)
+        isGameBoardDisabled = false
     }
     
     func checkForDraw(in moves: [Move?]) -> Bool {
@@ -93,6 +95,36 @@ struct ContentView: View {
     }
     
     func determineComputerMovesPosition(in moves: [Move?]) -> Int {
+        
+        // If AI can win, win
+        let winPatterns: Set<Set<Int>> = [[0,1,2],[3,4,5],[6,7,8],[0,3,6], [1,4,7], [2,5,8],[0,4,8],[2,4,6]]
+        let computerMoves = moves.compactMap({$0}).filter({$0.player == .computer})
+        let computerPosition = Set(computerMoves.map({$0.boardIndex}))
+        for pattern in winPatterns {
+            let winPositions = pattern.subtracting(computerPosition)
+            if winPositions.count == 1 {
+                let isAvalible = !isSquareOccupied(in: moves, forIndex: winPositions.first!)
+                if isAvalible {return winPositions.first!}
+            }
+        }
+        
+        // If AI can't win, try to block
+        let humanMoves = moves.compactMap({$0}).filter({$0.player == .human})
+        let humanPosition = Set(humanMoves.map({$0.boardIndex}))
+        for pattern in winPatterns {
+            let winPositions = pattern.subtracting(humanPosition)
+            if winPositions.count == 1 {
+                let isAvalible = !isSquareOccupied(in: moves, forIndex: winPositions.first!)
+                if isAvalible {return winPositions.first!}
+            }
+        }
+        
+        // If AI can't win or blokc, take a middle square
+        let centerSquareIndex = 4
+        if !isSquareOccupied(in: moves, forIndex: 4) {return centerSquareIndex}
+        
+        
+        // IF AI cant take the middle square, taka a random one
         var movePosition = Int.random(in: 0..<9)
         while isSquareOccupied(in: moves, forIndex: movePosition) {
             movePosition = Int.random(in: 0..<9)
