@@ -26,6 +26,7 @@ struct ContentView : View {
         ZStack(alignment: .bottom) {
             ARViewContainer()
             ModelPickerView(models: models)
+            PlacentButtonsView()
         }
     }
 }
@@ -68,6 +69,35 @@ struct ModelPickerView: View {
     }
 }
 
+struct PlacentButtonsView: View {
+    var body: some View {
+        HStack {
+        Button {
+            print("DEBUG CANCEL")
+        } label: {
+            Image(systemName: "xmark")
+                .frame(width: 60, height: 60)
+                .font(.title)
+                .foregroundColor(.red)
+                .background(Color.white.opacity(0.75))
+                .cornerRadius(30)
+                .padding(20)
+        }
+        Button {
+            print("DEBUG MODEL CONFIM")
+        } label: {
+            Image(systemName: "checkmark")
+                .frame(width: 60, height: 60)
+                .font(.title)
+                .foregroundColor(.green)
+                .background(Color.white.opacity(0.75))
+                .cornerRadius(30)
+                .padding(20)
+        }
+    }
+    }
+}
+
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
@@ -75,3 +105,4 @@ struct ContentView_Previews : PreviewProvider {
     }
 }
 #endif
+
