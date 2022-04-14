@@ -16,7 +16,7 @@ struct TaskView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(hue: 0.123, saturation: 0.662, brightness: 1.0))
+        .background(Color(hue: 0.123, saturation: 0.176, brightness: 0.947))
     }
 }
 
