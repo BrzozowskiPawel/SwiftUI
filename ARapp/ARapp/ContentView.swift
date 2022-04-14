@@ -7,21 +7,25 @@
 
 import SwiftUI
 import RealityKit
+import ARKit
+import FocusEntity
 
 struct ContentView : View {
     @State private var isPlacementEnabled = false
-    @State private var selectedModel: String?
-    @State private var modelConfrimedForPlacement: String?
+    @State private var selectedModel: Model?
+    @State private var modelConfrimedForPlacement: Model?
     
-    private var models: [String] = {
+    private var models: [Model] = {
         let filemanager = FileManager.default
         guard let path = Bundle.main.resourcePath, let files = try? filemanager.contentsOfDirectory(atPath: path) else {
             return []
         }
-        var avalibleModels: [String] = []
+        var avalibleModels: [Model] = []
         for file in files where file.hasSuffix("usdz"){
             let name = file.replacingOccurrences(of: ".usdz", with: "")
-            avalibleModels.append(name)
+            
+            let model = Model(modelName: name)
+            avalibleModels.append(model)
         }
         return avalibleModels
     }()
@@ -42,18 +46,28 @@ struct ContentView : View {
 }
 
 struct ARViewContainer: UIViewRepresentable {
-    @Binding var modelConfirmedForPlacement: String?
+    @Binding var modelConfirmedForPlacement: Model?
     func makeUIView(context: Context) -> ARView {
         
-        let arView = ARView(frame: .zero)
+        let arView = CustromARView(frame: .zero)
         
         return arView
         
     }
     
     func updateUIView(_ uiView: ARView, context: Context) {
-        if let modelName = self.modelConfirmedForPlacement {
-            print("DEBUG: adding model to scene: \(modelName)")
+        if let model = self.modelConfirmedForPlacement {
+            if let modelEntity = model.modelEntity {
+                print("DEBUG: adding model to scene: \(model.modelName)")
+                
+                let anchorEntity = AnchorEntity(plane: .any)
+                anchorEntity.addChild(modelEntity.clone(recursive: true))
+                uiView.scene.addAnchor(anchorEntity)
+            } else {
+                print("Unable to load model entity!")
+            }
+            
+            
             DispatchQueue.main.async {
                 self.modelConfirmedForPlacement = nil
             }
@@ -62,10 +76,48 @@ struct ARViewContainer: UIViewRepresentable {
     
 }
 
+class CustromARView: ARView {
+    let focusSquare = FESquare()
+    
+    required init(frame frameRect: CGRect) {
+        super.init(frame: frameRect)
+        
+        focusSquare.viewDelegate = self
+        focusSquare.delegate = self
+        focusSquare.setAutoUpdate(to: true)
+        
+        self.setUpARView()
+    }
+    
+    @MainActor required dynamic init?(coder decoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setUpARView() {
+        let config = ARWorldTrackingConfiguration()
+        config.planeDetection = [.horizontal, .vertical]
+        config.environmentTexturing = .automatic
+        if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh){
+            config.sceneReconstruction = .mesh
+        }
+        self.session.run(config)
+    }
+}
+
+extension CustromARView: FEDelegate {
+    func toTrackingState() {
+        print("Tracking")
+    }
+    
+    func toInitializingState() {
+        print("Initializing")
+    }
+}
+
 struct ModelPickerView: View {
     @Binding var isPlacementEnabled: Bool
-    @Binding var selectedModel: String?
-    var models: [String]
+    @Binding var selectedModel: Model?
+    var models: [Model]
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -76,7 +128,7 @@ struct ModelPickerView: View {
                         self.selectedModel = self.models[index]
                         self.isPlacementEnabled = true
                     } label: {
-                        Image(self.models[index])
+                        Image(uiImage: self.models[index].image)
                             .resizable()
                             .frame(width: 80, height: 80)
                             .aspectRatio(1/1, contentMode: .fit)
@@ -93,8 +145,8 @@ struct ModelPickerView: View {
 
 struct PlacentButtonsView: View {
     @Binding var isPlacementEnabled: Bool
-    @Binding var selectedModel: String?
-    @Binding var modelConfirmedForPlacement: String?
+    @Binding var selectedModel: Model?
+    @Binding var modelConfirmedForPlacement: Model?
     
     var body: some View {
         HStack {

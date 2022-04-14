@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E56C328A2808011C00F4D876 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C32892808011C00F4D876 /* Model.swift */; };
+		E5B4FD3B2808158E008D66CB /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = E5B4FD3A2808158E008D66CB /* FocusEntity */; };
 		E5D2069428073F82002F8BFE /* toy_robot_vintage.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E5D2069228073F82002F8BFE /* toy_robot_vintage.usdz */; };
 		E5D2069528073F82002F8BFE /* chair_swan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E5D2069328073F82002F8BFE /* chair_swan.usdz */; };
 		E5E9D2B128070C1C0041E20B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9D2B028070C1C0041E20B /* AppDelegate.swift */; };
@@ -19,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E56C32892808011C00F4D876 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E5D2069228073F82002F8BFE /* toy_robot_vintage.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_robot_vintage.usdz; sourceTree = "<group>"; };
 		E5D2069328073F82002F8BFE /* chair_swan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = chair_swan.usdz; sourceTree = "<group>"; };
 		E5E9D2AD28070C1C0041E20B /* ARapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B4FD3B2808158E008D66CB /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,8 +68,9 @@
 				E5E9D2C02807112C0041E20B /* Models */,
 				E5E9D2B028070C1C0041E20B /* AppDelegate.swift */,
 				E5E9D2B228070C1C0041E20B /* ContentView.swift */,
-				E5E9D2B628070C1D0041E20B /* Assets.xcassets */,
 				E5E9D2B828070C1D0041E20B /* Preview Content */,
+				E5E9D2B628070C1D0041E20B /* Assets.xcassets */,
+				E56C32892808011C00F4D876 /* Model.swift */,
 			);
 			path = ARapp;
 			sourceTree = "<group>";
@@ -106,6 +111,9 @@
 			dependencies = (
 			);
 			name = ARapp;
+			packageProductDependencies = (
+				E5B4FD3A2808158E008D66CB /* FocusEntity */,
+			);
 			productName = ARapp;
 			productReference = E5E9D2AD28070C1C0041E20B /* ARapp.app */;
 			productType = "com.apple.product-type.application";
@@ -134,6 +142,9 @@
 				Base,
 			);
 			mainGroup = E5E9D2A428070C1C0041E20B;
+			packageReferences = (
+				E5B4FD392808158E008D66CB /* XCRemoteSwiftPackageReference "FocusEntity" */,
+			);
 			productRefGroup = E5E9D2AE28070C1C0041E20B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -165,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56C328A2808011C00F4D876 /* Model.swift in Sources */,
 				E5E9D2B328070C1C0041E20B /* ContentView.swift in Sources */,
 				E5E9D2B128070C1C0041E20B /* AppDelegate.swift in Sources */,
 			);
@@ -373,6 +385,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E5B4FD392808158E008D66CB /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				kind = exactVersion;
+				version = 1.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E5B4FD3A2808158E008D66CB /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E5B4FD392808158E008D66CB /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E5E9D2A528070C1C0041E20B /* Project object */;
 }
