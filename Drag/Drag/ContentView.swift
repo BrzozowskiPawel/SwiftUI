@@ -9,8 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        LinearGradient(colors: [.yellow,.red], startPoint: .topLeading, endPoint: .bottomTrailing)
+            .frame(width: 200, height: 200)
+            .clipShape(RoundedRectangle(cornerRadius: 30))
     }
 }
 
