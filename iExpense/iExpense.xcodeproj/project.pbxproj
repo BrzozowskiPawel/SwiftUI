@@ -13,6 +13,7 @@
 		E5AC92902810894800AD71BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5AC928F2810894800AD71BE /* Preview Assets.xcassets */; };
 		E5AC92972810898200AD71BE /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC92962810898200AD71BE /* ExpenseItem.swift */; };
 		E5AC929928108A0B00AD71BE /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC929828108A0B00AD71BE /* Expenses.swift */; };
+		E5AC929B2810976200AD71BE /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC929A2810976200AD71BE /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		E5AC928F2810894800AD71BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5AC92962810898200AD71BE /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 		E5AC929828108A0B00AD71BE /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		E5AC929A2810976200AD71BE /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				E5AC928E2810894800AD71BE /* Preview Content */,
 				E5AC92962810898200AD71BE /* ExpenseItem.swift */,
 				E5AC929828108A0B00AD71BE /* Expenses.swift */,
+				E5AC929A2810976200AD71BE /* AddView.swift */,
 			);
 			path = iExpense;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				E5AC929928108A0B00AD71BE /* Expenses.swift in Sources */,
 				E5AC928B2810894700AD71BE /* ContentView.swift in Sources */,
+				E5AC929B2810976200AD71BE /* AddView.swift in Sources */,
 				E5AC92972810898200AD71BE /* ExpenseItem.swift in Sources */,
 				E5AC92892810894700AD71BE /* iExpenseApp.swift in Sources */,
 			);
