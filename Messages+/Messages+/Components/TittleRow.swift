@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TittleRow: View {
+struct TitleRow: View {
     var imageUrl = URL(string: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1061&q=80")
     
     var name = "Sarah Smith"
@@ -43,7 +43,7 @@ struct TittleRow: View {
 
 struct TittleRow_Previews: PreviewProvider {
     static var previews: some View {
-        TittleRow()
+        TitleRow()
             .background(Color("Peach"))
     }
 }
