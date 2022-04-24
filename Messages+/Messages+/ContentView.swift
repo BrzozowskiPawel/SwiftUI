@@ -17,18 +17,22 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            TitleRow()
-            ScrollView {
-                ForEach(messages) {
-                    MessageBubble(message: $0)
+            VStack {
+                TitleRow()
+                ScrollView {
+                    ForEach(messages) {
+                        MessageBubble(message: $0)
+                    }
                 }
+                .padding(.top, 10)
+                .background(.white)
+                .cornerRadius(30, corners: [.topLeft, .topRight])
+                
             }
-            .padding(.top, 10)
-            .background(.white)
-            .cornerRadius(30, corners: [.topLeft, .topRight])
+            .background(Color("Peach"))
             
+            MessageField()
         }
-        .background(Color("Peach"))
     }
 }
 

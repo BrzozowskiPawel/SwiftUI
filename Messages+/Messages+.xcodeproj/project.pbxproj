@@ -15,6 +15,7 @@
 		E5E62DDE2816024900DD17E3 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E62DDD2816024900DD17E3 /* Message.swift */; };
 		E5E62DE0281602AC00DD17E3 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E62DDF281602AC00DD17E3 /* MessageBubble.swift */; };
 		E5E62DE22816067900DD17E3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E62DE12816067900DD17E3 /* Extensions.swift */; };
+		E5E62DE42816071700DD17E3 /* MessageField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E62DE32816071700DD17E3 /* MessageField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		E5E62DDD2816024900DD17E3 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		E5E62DDF281602AC00DD17E3 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
 		E5E62DE12816067900DD17E3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E5E62DE32816071700DD17E3 /* MessageField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				E5E62DDA2815D3AA00DD17E3 /* TittleRow.swift */,
 				E5E62DDF281602AC00DD17E3 /* MessageBubble.swift */,
+				E5E62DE32816071700DD17E3 /* MessageField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				E5E62DCE2815D0B900DD17E3 /* ContentView.swift in Sources */,
 				E5E62DE22816067900DD17E3 /* Extensions.swift in Sources */,
 				E5E62DDE2816024900DD17E3 /* Message.swift in Sources */,
+				E5E62DE42816071700DD17E3 /* MessageField.swift in Sources */,
 				E5E62DE0281602AC00DD17E3 /* MessageBubble.swift in Sources */,
 				E5E62DCC2815D0B900DD17E3 /* Messages_App.swift in Sources */,
 				E5E62DDB2815D3AA00DD17E3 /* TittleRow.swift in Sources */,
