@@ -11,6 +11,7 @@
 		E5E62DCE2815D0B900DD17E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E62DCD2815D0B900DD17E3 /* ContentView.swift */; };
 		E5E62DD02815D0BA00DD17E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5E62DCF2815D0BA00DD17E3 /* Assets.xcassets */; };
 		E5E62DD32815D0BA00DD17E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5E62DD22815D0BA00DD17E3 /* Preview Assets.xcassets */; };
+		E5E62DDB2815D3AA00DD17E3 /* TittleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E62DDA2815D3AA00DD17E3 /* TittleRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E5E62DCD2815D0B900DD17E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E5E62DCF2815D0BA00DD17E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5E62DD22815D0BA00DD17E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5E62DDA2815D3AA00DD17E3 /* TittleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TittleRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				E5E62DCB2815D0B900DD17E3 /* Messages_App.swift */,
 				E5E62DCD2815D0B900DD17E3 /* ContentView.swift */,
+				E5E62DD92815D39400DD17E3 /* Components */,
 				E5E62DCF2815D0BA00DD17E3 /* Assets.xcassets */,
 				E5E62DD12815D0BA00DD17E3 /* Preview Content */,
 			);
@@ -65,6 +68,14 @@
 				E5E62DD22815D0BA00DD17E3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E5E62DD92815D39400DD17E3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E5E62DDA2815D3AA00DD17E3 /* TittleRow.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				E5E62DCE2815D0B900DD17E3 /* ContentView.swift in Sources */,
 				E5E62DCC2815D0B900DD17E3 /* Messages_App.swift in Sources */,
+				E5E62DDB2815D3AA00DD17E3 /* TittleRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
